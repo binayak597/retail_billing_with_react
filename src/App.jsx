@@ -1,6 +1,7 @@
 
 import Menubar from './components/menubar/Menubar'
 import {Routes, Route} from 'react-router-dom';
+import {Toaster} from 'react-hot-toast'
 import ManageCategory from './pages/manage-category/ManageCategory';
 import Dashboard from './pages/dashboard/Dashboard';
 import Explore from './pages/explore/Explore';
@@ -12,6 +13,7 @@ const App = () => {
     <div>
       <Menubar />
 
+      <Toaster />
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/category" element={<ManageCategory />} />

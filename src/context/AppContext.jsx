@@ -7,6 +7,7 @@ export const AppContext = createContext(null);
 export const AppContextProvider = ({ children }) => {
   const [categories, setCategories] = useState([]);
   const [items, setItems] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
   
 
   const [auth, setAuth] = useState({

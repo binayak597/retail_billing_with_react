@@ -1,10 +1,12 @@
 import { createContext, useEffect, useState } from "react";
 import { fetchCategories } from "../service/CategoryService";
+import { fetchItems } from "../service/itemService";
 
 export const AppContext = createContext(null);
 
 export const AppContextProvider = ({ children }) => {
   const [categories, setCategories] = useState([]);
+  const [items, setItems] = useState([]);
   
 
   const [auth, setAuth] = useState({
@@ -24,8 +26,10 @@ export const AppContextProvider = ({ children }) => {
         )
       }
       const response = await fetchCategories();
+      const itemResponse = await fetchItems();
 
       setCategories(response.data);
+      setItems(itemResponse.data);
     }
 
     loadData();
@@ -41,7 +45,8 @@ export const AppContextProvider = ({ children }) => {
     setCategories,
     auth,
     setAuthData,
-    
+    items,
+    setItems
   };
 
   return (

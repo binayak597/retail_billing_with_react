@@ -14,6 +14,33 @@ export const AppContextProvider = ({ children }) => {
     role: null
   })
 
+  const addToCart = (item) => {
+
+    const existingItem = cartItems.find(cartItem => cartItem.name === item.name)
+
+    if(existingItem){
+
+      setCartItems(cartItems => {
+
+        return cartItems.map(cartItem => cartItem.name === item.name? {...cartItem, quantity: cartItem.quantity + 1}: cartItem)
+      })
+    }else{
+      setCartItems(cartItems => [...cartItems, {...item, quantity: 1}])
+    }
+  }
+
+  const removeFromCart = (itemId) => {
+
+    setCartItems(cartItems.filter(item => item.itemId !== itemId));
+  }
+
+  const updateQuantity = (itemId, newQuantity) => {
+
+    setCartItems(cartItems => cartItems.map(item => {
+
+      return item.itemId === itemId? {...item, quantity: newQuantity}: item
+    }))
+  }
  
   useEffect(() => {
     async function loadData() {
@@ -46,7 +73,11 @@ export const AppContextProvider = ({ children }) => {
     auth,
     setAuthData,
     items,
-    setItems
+    setItems,
+    addToCart,
+    cartItems,
+    removeFromCart,
+    updateQuantity
   };
 
   return (

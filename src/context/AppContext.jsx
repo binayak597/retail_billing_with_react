@@ -42,6 +42,11 @@ export const AppContextProvider = ({ children }) => {
       return item.itemId === itemId? {...item, quantity: newQuantity}: item
     }))
   }
+
+  const clearCart = () => {
+
+    setCartItems([]);
+  }
  
   useEffect(() => {
     async function loadData() {
@@ -78,7 +83,8 @@ export const AppContextProvider = ({ children }) => {
     addToCart,
     cartItems,
     removeFromCart,
-    updateQuantity
+    updateQuantity,
+    clearCart
   };
 
   return (

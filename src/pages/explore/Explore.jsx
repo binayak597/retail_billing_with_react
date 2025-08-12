@@ -10,7 +10,7 @@ import CartSummary from "../../components/cart-summary/CartSummary";
 const Explore = () => {
   const { categories } = useContext(AppContext);
 
-  const [ selectedCategory, setSelectedCategory ] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const [customerName, setCustomerName] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
@@ -47,16 +47,16 @@ const Explore = () => {
           className="cart-items-container"
           style={{ height: "38%", overflowY: "auto" }}
         >
-          <CartItems
+          <CartItems />
+        </div>
+
+        <div className="cart-summary-container" style={{ height: "30%" }}>
+          <CartSummary
             customerName={customerName}
             setCustomerName={setCustomerName}
             mobileNumber={mobileNumber}
             setMobileNumber={setMobileNumber}
           />
-        </div>
-
-        <div className="cart-summary-container" style={{ height: "30%"}}>
-          <CartSummary />
         </div>
       </div>
     </div>

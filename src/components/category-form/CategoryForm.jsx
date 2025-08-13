@@ -112,6 +112,7 @@ const CategoryForm = () => {
                     placeholder="Category Name"
                     onChange={onCangeHandler}
                     value={data.name}
+                    required
                   />
                 </div>
 
@@ -143,6 +144,7 @@ const CategoryForm = () => {
                     placeholder="#ffffff"
                     onChange={onCangeHandler}
                     value={data.bgColor}
+                    required
                   />
                 </div>
 

@@ -6,6 +6,7 @@ It connects to the Spring Boot backend, supports **role-based access (USER & ADM
 ---
 
 ## 🚀 Features
+
 - **Modern, responsive UI** built with TailwindCSS
 - **JWT Authentication** (Login/Protected Pages)
 - **Role-based Access Control**
@@ -18,6 +19,7 @@ It connects to the Spring Boot backend, supports **role-based access (USER & ADM
 ---
 
 ## 🛠 Tech Stack
+
 - **Frontend Framework:** React (Vite)
 - **Styling:** TailwindCSS
 - **State Management:** React Hooks & Context API
@@ -26,24 +28,28 @@ It connects to the Spring Boot backend, supports **role-based access (USER & ADM
 
 ---
 
-
 ## 📸 Screenshots
 
-### 🔹 Dashboard  
+### 🔹 Dashboard
+
 ![Dashboard](./screenshots/dashboard.png)
 
-### 🔹 Explore Section 
+### 🔹 Explore Section
+
 ![Explore Section](./screenshots/explore.png)
 
-### 🔹 Manage Items Section 
+### 🔹 Manage Items Section
+
 ![Manage Items Section](./screenshots/items.png)
 
-### 🔹 Order History Section 
+### 🔹 Order History Section
+
 ![Order History Section](./screenshots/orders.png)
 
 ## ⚙️ Installation & Setup
 
 ### **1️⃣ Clone the Repository**
+
 ```bash
 git clone https://github.com/binayak597/retail_billing_with_react.git
 cd retail-billing-frontend
@@ -70,6 +76,7 @@ VITE_RAZORPAY_KEY=your_razorpay_key_here
 ```bash
 npm run dev
 ```
+
 - Frontend will be available at:
 
 ```arduino
@@ -77,6 +84,7 @@ http://localhost:5173
 ```
 
 ## 🔐 Authentication Flow
+
 1.User logs in with email & password.
 
 2.Backend returns a JWT token.
@@ -88,10 +96,11 @@ http://localhost:5173
 ```makefile
 Authorization: Bearer <token>
 ```
+
 5.Protected pages are accessible based on role (USER or ADMIN).
 
-
 ## 💳 Razorpay Payment Flow
+
 1.User adds items to cart and clicks Checkout.
 
 2.Frontend calls backend to create a Razorpay order.
@@ -111,6 +120,7 @@ User is notified
 Payment can be retried
 
 ## 📦 Build for Production
+
 ```bash
 npm run build
 ```
@@ -122,8 +132,14 @@ Deploy them to any static hosting service (Vercel, Netlify, etc.).
 
 To explore the application, use the following login credentials:
 
-- **Username/Email:** admin@example.com  
-- **Password:** 123456  
+- **Username/Email:** admin@example.com
+- **Password:** 123456
+
+### (NOTE)
+
+- #### Admin can only create user.
+- #### User can not create by own.
+- #### Admin will create and pass the credentials to user.
 
 ## 📜 License
 

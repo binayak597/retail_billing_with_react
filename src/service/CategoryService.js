@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { BASE_API } from '../main';
 
 const token = localStorage.getItem("token");
 
@@ -22,7 +23,7 @@ export const deleteCategory = async (categoryId) => {
 
 export const fetchCategories = async () => {
 
-  return await axios.get("http://localhost:5454/api/v1.0/categories", {
+  return await axios.get(`${BASE_API}/categories`, {
     headers: {
       'Authorization': `Bearer ${token}`
     }

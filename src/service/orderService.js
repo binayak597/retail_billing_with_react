@@ -1,10 +1,11 @@
 import axios from 'axios';
+import { BASE_API } from '../main';
 
 const token = localStorage.getItem("token");
 
 export const createOrder = async (order) => {
 
-  return await axios.post("http://localhost:5454/api/v1.0/orders", order, {
+  return await axios.post(`${BASE_API}/orders`, order, {
 
     headers: {
       "Authorization": `Bearer ${token}`
@@ -14,7 +15,7 @@ export const createOrder = async (order) => {
 
 export const getLatestOrders = async () => {
 
-  return await axios.get("http://localhost:5454/api/v1.0/orders/latest", {
+  return await axios.get(`${BASE_API}/orders/latest`, {
 
     headers: {
       "Authorization": `Bearer ${token}`
@@ -24,7 +25,7 @@ export const getLatestOrders = async () => {
 
 export const deleteOrder = async (orderId) => {
 
-  return await axios.delete(`http://localhost:5454/api/v1.0/orders/latest/${orderId}`, {
+  return await axios.delete(`${BASE_API}/orders/latest/${orderId}`, {
 
     headers: {
       "Authorization": `Bearer ${token}`

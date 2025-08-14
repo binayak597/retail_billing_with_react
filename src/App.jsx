@@ -77,7 +77,7 @@ const App = () => {
         <Route path="/login" element={<LoginRoute element={<Login />} />} />
 
         <Route path="/orders" element={<OrderHistory />} />
-        <Route path="/" element={<LoginRoute element={<Dashboard />} />} />
+        <Route path="/" element={<ProtectedRoute element={<Dashboard />} allowedRoles={["ROLE_ADMIN", "ROLE_USER"]} />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

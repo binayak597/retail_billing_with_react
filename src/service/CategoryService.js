@@ -5,7 +5,7 @@ const token = localStorage.getItem("token");
 
 export const addCategory = async (category) => {
 
-  return await axios.post('http://localhost:5454/api/v1.0/admin/categories', category, {
+  return await axios.post(`${BASE_API}/admin/categories`, category, {
     headers: {
       'Authorization': `Bearer ${token}`
     }
@@ -14,7 +14,7 @@ export const addCategory = async (category) => {
 
 export const deleteCategory = async (categoryId) => {
 
-  return await axios.delete(`http://localhost:5454/api/v1.0/admin/categories/${categoryId}`, {
+  return await axios.delete(`${BASE_API}/admin/categories/${categoryId}`, {
     headers: {
       'Authorization': `Bearer ${token}`
     }

@@ -5,6 +5,17 @@ It connects to the Spring Boot backend, supports **role-based access (USER & ADM
 
 ---
 
+## Website URLS
+
+- Retail-Billing-App -> https://retail-billing-app.netlify.app
+
+## 📌 Demo Credentials
+
+To explore the application, use the following login credentials:
+
+- **Username/Email:** admin@example.com
+- **Password:** 123456
+
 ## 🚀 Features
 
 - **Modern, responsive UI** built with TailwindCSS
@@ -128,12 +139,6 @@ npm run build
 The production-ready files will be generated in the dist/ folder.
 Deploy them to any static hosting service (Vercel, Netlify, etc.).
 
-## 📌 Demo Credentials
-
-To explore the application, use the following login credentials:
-
-- **Username/Email:** admin@example.com
-- **Password:** 123456
 
 ### (NOTE)
 
@@ -153,4 +158,7 @@ Contributions are welcome! If you find any bugs or have suggestions for improvem
 
 If you liked this project, don't forget to ⭐ the repository! You can check out my other projects on [GitHub](https://github.com/binayak597).
 
+If you have any feedback, please reach out to me [here](https://www.linkedin.com/in/binayak-mukherjee)
+
 Happy coding! 🚀
+
